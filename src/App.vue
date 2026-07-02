@@ -309,7 +309,7 @@ onBeforeUnmount(() => {
       </section>
 
       <section class="music-panel">
-        <p>Dale play a nuestra canción</p>
+        <p>Sube el Volumen de tu Dispositivo para escuchar mejor la canción</p>
         <div class="music-control">
           <button
             id="musicToggle2"
@@ -396,12 +396,12 @@ onBeforeUnmount(() => {
         <h2>Código de vestimenta</h2>
         <p class="dress-subtitle">Formal</p>
         <div class="dress-code">
-          <p><strong>Mujeres:</strong> vestido largo, no blanco ni gama morada.</p>
-          <p><strong>Hombres:</strong> traje formal, no gris.</p>
+          <p><strong>Mujeres:</strong> vestido largo, no blanco ni gama De Color Morado.</p>
+          <p><strong>Hombres:</strong> No trajes de Color Gris Oscuro.</p>
         </div>
 
         <div class="recommendations">
-          <h3>Sin niños</h3>
+          <h3>Evento Sin niños</h3>
           <p>Aunque amamos a los niños, nuestra celebración será exclusiva para adultos.</p>
         </div>
       </section>
@@ -419,7 +419,7 @@ onBeforeUnmount(() => {
           Mesa Amazon
         </a>
         <div class="envelope-note">
-          <strong>Sobres</strong>
+          <strong>Efectivo</strong>
           <span>Encontrarás nuestro buzón el día del evento.</span>
         </div>
       </section>
