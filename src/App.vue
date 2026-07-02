@@ -309,7 +309,7 @@ onBeforeUnmount(() => {
       </section>
 
       <section class="music-panel">
-        <p>Sube el Volumen de tu Dispositivo para escuchar mejor la canción</p>
+        <p>Sube el volumen de tu dispositivo para escuchar mejor la canción</p>
         <div class="music-control">
           <button
             id="musicToggle2"
@@ -461,11 +461,11 @@ onBeforeUnmount(() => {
             </label>
           </fieldset>
           <label>
-            Número de invitados que asistirán (Por favor, ingresa el número exacto de invitados que aparece en tu pase. No se permite un número mayor.)*
+            Número de invitados que asistirán (Por favor, ingresa el número exacto de lugares Reservados en tu Invitación. No será posible Registrar un Número mayor.)*
             <input v-model="rsvpForm.invitados" name="invitados" inputmode="numeric" required>
           </label>
           <label>
-            Nomina una canción para nuestra lista de reproducción
+            Nomina una canción para nuestra Playlist
             <input v-model="rsvpForm.cancion" name="cancion">
           </label>
           <label>
