@@ -5,7 +5,7 @@ import itineraryPhoto from "../assets/IMG_8126.jpg";
 import memoryPhoto from "../assets/FullSizeRender.jpg";
 
 const weddingDate = new Date("2026-09-19T17:30:00-06:00");
-const youtubeVideoId = "pvStaSjnPAI";
+const youtubeVideoId = "T1ztzwGs_MQ";
 const rsvpEndpoint = String(window.RSVP_SHEETS_URL || "").trim();
 
 const menuOpen = ref(false);
