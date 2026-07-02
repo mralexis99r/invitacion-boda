@@ -482,6 +482,11 @@ onBeforeUnmount(() => {
         </form>
         <p id="formNote2" class="form-note" aria-live="polite">{{ formNote }}</p>
       </section>
+
+      <footer class="site-signature">
+        <span>This website was made by</span>
+        <strong>Alexis Roman</strong>
+      </footer>
     </main>
   </div>
 </template>
