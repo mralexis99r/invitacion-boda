@@ -346,7 +346,7 @@ onBeforeUnmount(() => {
         <article>
           <span class="line-icon">⛪︎</span>
           <h2>Ceremonia religiosa</h2>
-          <p>Iglesia</p>
+          <p>Iglesia Nazareth</p>
           <p class="address">Benito Juárez 2521_O BODEGA, Guadalupe Victoria, 67185 Guadalupe, N.L., México</p>
           <a
             class="outline-button"
@@ -420,7 +420,7 @@ onBeforeUnmount(() => {
         </a>
         <div class="envelope-note">
           <strong>Efectivo</strong>
-          <span>Encontrarás nuestro buzón el día del evento.</span>
+          <span>Encontrarás nuestro Buzón de sobres el día del evento.</span>
         </div>
       </section>
 
@@ -475,9 +475,10 @@ onBeforeUnmount(() => {
           <button class="light-button answer-button" type="submit" :disabled="submitting">
             {{ submitting ? "Enviando..." : "Responder ahora" }}
           </button>
+
+          <p><strong>Fecha Limite de Registro: <br>16 de Agosto de 2026</strong></p>
           <p class="privacy-note">
-            Se compartirá el nombre de tu perfil de Canva. Nunca envíes tus contraseñas.
-            Obtén más información sobre cómo manejamos tus datos personales.
+            Solo se Compartiran los Datos Solicitados del formulario, No agregues información no deseada, ni Datos Sensibles.
           </p>
         </form>
         <p id="formNote2" class="form-note" aria-live="polite">{{ formNote }}</p>
