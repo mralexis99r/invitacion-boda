@@ -461,7 +461,7 @@ onBeforeUnmount(() => {
             </label>
           </fieldset>
           <label>
-            Número de invitados que asistirán (Por favor, ingresa el número exacto de lugares Reservados en tu Invitación. No será posible Registrar un Número mayor.)*
+            Número de invitados que asistirán. <br>(Por favor, ingresa el número exacto de lugares Reservados en tu Invitación. <br> No será posible Registrar un Número mayor.)*
             <input v-model="rsvpForm.invitados" name="invitados" inputmode="numeric" required>
           </label>
           <label>
@@ -476,7 +476,7 @@ onBeforeUnmount(() => {
             {{ submitting ? "Enviando..." : "Responder ahora" }}
           </button>
 
-          <p><strong>Fecha Limite de Registro: <br>16 de Agosto de 2026</strong></p>
+          <p><strong>Fecha Limite de Registro: <br>16 de Agosto del 2026</strong></p>
           <p class="privacy-note">
             Solo se Compartiran los Datos Solicitados del formulario, No agregues información no deseada, ni Datos Sensibles.
           </p>
