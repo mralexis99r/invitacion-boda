@@ -10,9 +10,9 @@ const menuPanel2 = document.querySelector(".menu-panel");
 const musicFrame2 = document.querySelector("#musicFrame2");
 const musicToggle2 = document.querySelector("#musicToggle2");
 const musicState = document.querySelector("[data-music-state]");
-const youtubeUrl2 = "https://www.youtube.com/embed/B2svpqTu3Uo?autoplay=1&loop=1&playlist=B2svpqTu3Uo&controls=0&modestbranding=1&playsinline=1&rel=0&enablejsapi=1";
+const youtubeVideoId2 = "B2svpqTu3Uo";
 const rsvpEndpoint2 = String(window.RSVP_SHEETS_URL || "").trim();
-let musicPlaying = true;
+let musicPlaying = false;
 let musicInitialized = false;
 
 function pad2(value, size = 2) {
@@ -34,21 +34,53 @@ function updateCountdown2() {
 }
 
 function sendMusicCommand(command) {
+  if (!musicInitialized || !musicFrame2.contentWindow) return;
+
   musicFrame2.contentWindow?.postMessage(
     JSON.stringify({ event: "command", func: command, args: [] }),
     "*"
   );
 }
 
-function startMusic2(force = false) {
+function buildYoutubeUrl2() {
+  const origin = window.location.origin.startsWith("http")
+    ? `&origin=${encodeURIComponent(window.location.origin)}`
+    : "";
+
+  return [
+    `https://www.youtube.com/embed/${youtubeVideoId2}?autoplay=1`,
+    `loop=1`,
+    `playlist=${youtubeVideoId2}`,
+    `controls=0`,
+    `modestbranding=1`,
+    `playsinline=1`,
+    `rel=0`,
+    `enablejsapi=1${origin}`,
+  ].join("&");
+}
+
+function loadMusicFrame2(force = false) {
   if (!musicInitialized || force) {
+    const youtubeUrl2 = buildYoutubeUrl2();
     musicFrame2.src = `${youtubeUrl2}&start=1&resume=${Date.now()}`;
     musicInitialized = true;
   }
+}
+
+function prepareMusic2() {
+  loadMusicFrame2();
+  musicToggle2.classList.add("is-paused");
+  musicState.textContent = "Activar audio";
+  setTimeout(() => sendMusicCommand("playVideo"), 650);
+}
+
+function startMusic2(force = false) {
+  loadMusicFrame2(force);
   musicPlaying = true;
   musicToggle2.classList.remove("is-paused");
   musicState.textContent = "Reproduciendo";
   setTimeout(() => sendMusicCommand("playVideo"), 650);
+  setTimeout(() => sendMusicCommand("playVideo"), 1200);
 }
 
 function pauseMusic2() {
@@ -60,17 +92,20 @@ function pauseMusic2() {
 
 updateCountdown2();
 setInterval(updateCountdown2, 1000);
-setTimeout(startMusic2, 500);
+prepareMusic2();
 
 ["pointerdown", "keydown", "touchstart"].forEach((eventName) => {
-  window.addEventListener(eventName, () => startMusic2(), { once: true, passive: true });
+  window.addEventListener(eventName, (event) => {
+    if (event.target?.closest?.("#musicToggle2")) return;
+    startMusic2();
+  }, { once: true, passive: true });
 });
 
 musicToggle2.addEventListener("click", () => {
   if (musicPlaying) {
     pauseMusic2();
   } else {
-    startMusic2(true);
+    startMusic2();
   }
 });
 
