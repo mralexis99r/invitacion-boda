@@ -261,14 +261,17 @@ onBeforeUnmount(() => {
   <div class="invite-shell">
     <button
       class="floating-menu"
+      :class="{ 'is-open': menuOpen }"
       type="button"
-      aria-label="Abrir menú"
+      :aria-label="menuOpen ? 'Cerrar menu' : 'Abrir menu'"
       :aria-expanded="String(menuOpen)"
       @click="menuOpen = !menuOpen"
     >
-      <span></span>
-      <span></span>
-      <span></span>
+      <span class="menu-dot" aria-hidden="true"></span>
+      <span class="menu-lines" aria-hidden="true">
+        <span></span>
+        <span></span>
+      </span>
     </button>
 
     <nav class="menu-panel" :class="{ 'is-open': menuOpen }" aria-label="Secciones">
