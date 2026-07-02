@@ -1,0 +1,29 @@
+{
+  "name": "invitacion-boda",
+  "version": "1.0.0",
+  "description": "Invitación de boda de Vivian y Alexis",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5173",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mralexis99r/invitacion-boda.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mralexis99r/invitacion-boda/issues"
+  },
+  "homepage": "https://github.com/mralexis99r/invitacion-boda#readme",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.2",
+    "@vitejs/plugin-vue": "^6.0.7",
+    "tailwindcss": "^4.3.2",
+    "vite": "^8.1.2",
+    "vue": "^3.5.39"
+  }
+}

@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   --script-font: "Eyesome Script", "Oooh Baby", "Great Vibes", cursive;
   --serif-font: "Cormorant Garamond", Georgia, serif;
