@@ -341,14 +341,30 @@ onBeforeUnmount(() => {
 
       <section id="ubicacion" class="location-panel paper-panel">
         <article>
-          <span class="line-icon">⌂</span>
+          <span class="line-icon">⛪︎</span>
           <h2>Ceremonia religiosa</h2>
-          <time>5:30 pm</time>
           <p>Iglesia</p>
           <p class="address">Benito Juárez 2521_O BODEGA, Guadalupe Victoria, 67185 Guadalupe, N.L., México</p>
           <a
             class="outline-button"
-            href="https://www.google.com/maps/search/?api=1&query=Benito%20Ju%C3%A1rez%202521_O%20BODEGA%2C%20Guadalupe%20Victoria%2C%2067185%20Guadalupe%2C%20N.L.%2C%20M%C3%A9xico"
+            href="https://maps.app.goo.gl/mAJFZohFNTKjge837"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Ver ubicación
+          </a>
+        </article>
+      </section>
+
+      <section id="ubicacion" class="location-panel paper-panel">
+        <article>
+          <span class="line-icon">⌂</span>
+          <h2>Recepción</h2>
+          <p>Olimpo Eventos Vista Hermosa</p>
+          <p class="address">1a Avenida 207, Cumbres 1er sector, 64610 Monterrey, N.L., México</p>
+          <a
+            class="outline-button"
+            href="https://maps.app.goo.gl/Ebvgo4FTQY6mZW8y5"
             target="_blank"
             rel="noreferrer"
           >
@@ -388,7 +404,7 @@ onBeforeUnmount(() => {
       </section>
 
       <section class="gift-panel lavender-panel">
-        <span class="gift-icon">□</span>
+        <span class="gift-icon">𖠩</span>
         <h2>Sugerencia de regalo</h2>
         <p>Tu compañía es lo más importante. Si desean hacernos un obsequio, lo recibiremos con mucho cariño.</p>
         <a
